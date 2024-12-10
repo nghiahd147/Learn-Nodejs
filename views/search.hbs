@@ -1,0 +1,18 @@
+<div class="mt-4">
+    {{!-- action: nó sẽ chuyển sang router đó và mang theo luôn cái parameters --}}
+    {{!-- Do đang là phg thức get nên nó sẽ đính dữ liệu lên url, để khắc phục thì ta phải dùng các phg khác như
+    post,... --}}
+    {{!-- Post --}}
+    {{!-- Để có thể sử dụng file post ở chính trang này ta cần phải tạo 1 router phg thức get 1 router phg thức post cho file search.hbs --}}
+    {{!-- Lúc này nó sẽ gửi 1 form data chứ không gửi query parameters gắn lên url nx --}}
+    {{!-- Xem form data ở Network -> Payload, nếu muốn xem ta cần sd req.body nhưng cần add thư viện express.json
+    vì nó ko đc middleware hỗ trợ sẵn như query parameters --}}
+    <form method="post" action="">
+        <div class="mb-3">
+            {{!-- Lúc này trên url nó sẽ tự sinh ra cái parameters q=tu_khoa_da_nhap --}}
+            <input type="text" name="q" class="form-control" placeholder="Nhập từ khóa tìm kiếm...">
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+    
+</div>

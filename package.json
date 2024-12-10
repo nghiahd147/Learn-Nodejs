@@ -1,0 +1,31 @@
+{
+  "name": "f8_nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "beautiful": "lint-staged",
+    "watch": "node-sass --watch views/scss/ --output public/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "lint-staged": {
+    "\"*.{js,json,scss}\"": "prettier --single-quote --trailing-comma all --write"
+  },
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "express-handlebars": "^8.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.4.2",
+    "sass": "^1.81.0"
+  }
+}
