@@ -4,16 +4,13 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --inspect index.js",
-    "beautiful": "lint-staged",
+    "beautiful": "prettier --single-quote --trailing-comma all --write \"*.{js,json,scss}\" ",
     "watch": "node-sass --watch views/scss/ --output public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "type": "module",
-  "lint-staged": {
-    "\"*.{js,json,scss}\"": "prettier --single-quote --trailing-comma all --write"
-  },
   "description": "",
   "dependencies": {
     "express": "^4.21.1",
